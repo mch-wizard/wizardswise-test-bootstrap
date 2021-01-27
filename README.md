@@ -1,5 +1,6 @@
 # WIZARDSWISE
-Software House test site from Bootstrap. . 
+Software House test site from Bootstrap.
+Preview: https://wizardswise.netlify.app/
 
 ## Purpose
 The purpose of the website is to test the possibilities of Bootstrap and slick as well as learn web design. 
