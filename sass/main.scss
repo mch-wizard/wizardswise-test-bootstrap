@@ -1,0 +1,525 @@
+$blue-color: #039dff;
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #333333;
+}
+
+.blue-text {
+    color: $blue-color;
+}
+
+.wrapper {
+    max-width: 2560px;
+    width: 80%;
+    margin: 0 auto;
+
+    h2 {
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+.underline {
+    margin: 0 auto;
+    margin-bottom: 40px;
+    width: 60px;
+    height: 4px;
+    background-color: $blue-color;
+}
+
+//-------'before' element of the section and raise it by the height of the menu.
+.scroll-fix::before {
+    display: block;
+    margin-top: -66px;
+    height: 66px;
+    content: '';
+}
+
+.visibility {
+    visibility: hidden;
+}
+
+.jumbotron {
+    margin: 0;
+}
+
+//-------NAVIGATION
+nav {
+    text-transform: uppercase;
+    transition: background-color .6s;
+
+    a, i {
+        color: #ffffff;
+        transition: color .3s;
+    }
+
+    a:hover {
+        color: $blue-color;
+    }
+
+    i {
+        padding: 10px;
+    }
+
+    .navbar-brand {
+        font-weight: bold;
+    }
+
+    .active {
+        color: $blue-color;
+    }
+}
+
+.shadow-bg {
+    background-color: rgba(0,0,0,.9);
+}
+
+//-------HEADER
+header {
+    color: #ffffff;
+    overflow: hidden;
+
+    h1 {
+        padding: 10px;
+        text-transform: uppercase;
+        font-size: 30px;
+    }
+
+    .hero-img {
+        position: relative;
+        height: 100vh;
+        background-image: url('../img/hero-small.jpg');
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;   //Creates a cool background freezing effect when scrolling.
+        z-index: 0;
+    }
+
+    .hero-shadow {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.4);
+        z-index: -1;
+    }
+
+    .hero-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        text-align: center;
+
+        p {
+            padding: 10px;
+            font-size: 14px;
+        }
+    }
+
+    .btn-outline-light {
+        text-transform: uppercase;
+    }
+
+    .fa-chevron-down {
+        display: none;
+    }
+}
+
+//-------MAIN
+.aboutus {
+    i {
+        margin-top: 20px;
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+    
+    p {
+        font-size: 14px;
+    }
+
+    .aboutus-hover {
+        transition: color .3s;
+        // visibility: hidden;
+    }
+
+    .aboutus-hover:hover {
+        color: $blue-color;
+    }
+}
+
+.aboutus-hero {
+    color: #ddd;
+    overflow: hidden;
+
+    .jumbotron {
+        position: relative;
+        padding: 60px 0;
+        background-image: url('../img/hero-small.jpg');
+        background-position: center;
+        background-size: cover;
+        z-index: 0;
+
+        h2 {
+            font-size: 30px;
+        }
+
+        i {
+            font-size: 35px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+
+    .aboutus-shadow {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.7);
+        z-index: -1;
+    }
+
+    .aboutus-hero-item {
+        margin: 10px 0;
+    }
+}
+
+//-------PORTFOLIO
+.portfolio {
+    h2 {
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .carousel-item {
+        position: relative;
+        height: 600px;
+
+        img {
+            position: absolute;
+            // height: 700px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);   
+        }
+    }
+
+    .carousel-caption {
+        position: absolute;
+        left: 0;
+        right: 0;
+        padding: 40px 0;
+        background-color: rgba(0,0,0,.8);
+    }
+
+    .carousel-indicators {
+        padding-bottom: 20px;
+    }
+
+    .card-deck {
+        display: flex;
+        flex-direction: column;
+
+        .card {
+            margin-top: 10px;
+        }
+    }
+}
+
+//-------PRICES
+.prices {
+    .jumbotron {
+        background-color: #f9f9f9;
+
+        h2 {
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+
+    .prices-wrap {
+        max-width: 2560px;
+        width: 95%;
+        margin: 0 auto;
+    }
+    
+    .prices-box {
+        margin: 20px 10px;
+        padding: 30px;
+        background-color: #fff;
+        box-shadow: 5px 5px 5px rgba(0,0,0,.6);
+        transition: transform .3s;
+
+        h3 {
+            color: $blue-color;
+            text-transform: uppercase;
+        }
+
+        span {
+            font-weight: bold;
+        }
+
+        i {
+            padding: 0 5px;
+            font-size: 23px;
+        }
+
+        button {
+            padding: 10px 20px;
+            text-transform: uppercase;
+        }
+
+        .price {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    }
+
+    .prices-box:hover {
+        transform: scale(1.05);
+    }
+
+    .prices-text {
+        margin-top: 30px;
+    }
+}
+
+//-------TEAM
+.team {
+    .jumbotron {
+        position: relative;
+        background-image: url('../img/team-hero.jpg');
+        background-attachment: fixed;
+        background-size: cover;
+        z-index: 0;
+
+        h2 {
+            text-transform: uppercase;
+            text-align: center;
+            color: #ddd;
+        }
+    }
+
+    .team-shadow {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.8);
+    }
+
+    .card-deck {
+        margin-bottom: 50px;
+    }
+
+    .card {
+        transition: transform .3s;
+
+        img {
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        i {
+            padding: 10px 20px;
+        }
+
+        .card-footer {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    .card:hover {
+        transform: scale(.96);
+    }
+
+    .card-body {
+        height: 150px;
+    }
+
+    .card-title {
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .card-text {
+        font-size: 14px;
+    }
+}
+
+//-------ACHIEVEMENTS
+.achievements {
+    .jumbotron {
+        h2 {
+            margin-top: 66px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+
+    .achievements-list {
+        padding: 50px 0;
+    }
+
+    .achievements-item {
+        text-align: center;
+    }
+
+    i {
+        padding: 10px;
+        font-size: 48px;
+        color: #fff;
+        text-shadow: 0 0 5px black;
+    }
+
+    .achievements-number {
+        font-size: 22px;
+    }
+
+    .achievements-text {
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+}
+
+//-------CONTACT
+.contact {
+    .jumbotron {
+        position: relative;
+        background-image: url('../img/contact-hero.png');
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        z-index: 0;
+
+        h2 {
+            text-transform: uppercase;
+            text-align: center;
+            color: #fff;
+            font-weight: bold;
+        }
+    }
+
+    .contact-shadow {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,9,27,.85);
+        z-index: -1;
+    }
+
+    .contact-us {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        padding: 50px 0;
+
+        .contact-item {
+            margin: 30px 0;
+
+            h3 {
+                text-transform: uppercase;
+                margin-bottom: 15px;
+                font-size: 24px;
+                // letter-spacing: 2px;
+            }
+
+            .social-media {
+                font-size: 36px;
+
+                a {
+                    padding: 10px;
+                    text-shadow: 0 0 5px black;
+                    transition: color .3s;
+                }
+
+                a:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+//-------CONTACT
+footer {
+    color: #fff;
+    background-color: #000000;
+
+    p {
+        padding: 20px;
+        margin-bottom: 0;
+        text-align: center;
+
+        span {
+            color: $blue-color;
+        }
+    }
+}
+
+
+
+//-------Media Query
+@media (min-width: 375px) {
+    header {
+        h1 {
+            font-size: 36px;
+        }
+        .hero-text {
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .aboutus-hero {
+        .jumbotron {
+            h2 {
+                font-size: 32px;
+            }
+    
+            h3 {
+                font-size: 32px;
+            }
+    
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .team {
+        .card-text {
+            font-size: 15px;
+        }
+    }
+}
+
+@media (min-width: 414px) {
+    .aboutus-hero {
+        .jumbotron {
+            padding: 80px 0;
+        }
+    }
+}
